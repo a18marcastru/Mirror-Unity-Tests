@@ -253,7 +253,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &4448557040178251073
+--- !u!1 &5561908506943389190
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,22 +261,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 170816624368359379}
-  - component: {fileID: 4527655754911577938}
+  - component: {fileID: 7614448640189263013}
+  - component: {fileID: 4963598845360416249}
   m_Layer: 0
-  m_Name: MicController
+  m_Name: MicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &170816624368359379
+--- !u!4 &7614448640189263013
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448557040178251073}
+  m_GameObject: {fileID: 5561908506943389190}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -285,18 +285,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2633718379943395621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4527655754911577938
+--- !u!114 &4963598845360416249
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448557040178251073}
+  m_GameObject: {fileID: 5561908506943389190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0d23b3bfcef2f4e870c80cd569d8f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 99c129b3dc7844e6db5fdcfd075ff660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  micLoudness: 0
 --- !u!1 &7471872645048371333
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +314,7 @@ GameObject:
   - component: {fileID: 7831145970858278248}
   - component: {fileID: 106440002156593918}
   - component: {fileID: 1675108137825818671}
-  - component: {fileID: 1010947434334177022}
+  - component: {fileID: 2955245714912680080}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -335,7 +336,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4285427348539777136}
-  - {fileID: 170816624368359379}
+  - {fileID: 7614448640189263013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8559235311470311510
@@ -544,7 +545,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBarFill: {fileID: 2199438773534691742}
   healthBarCanvas: {fileID: 2300050636977401900}
---- !u!114 &1010947434334177022
+--- !u!114 &2955245714912680080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,11 +554,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7471872645048371333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ef6e458d5906147901b8bf797927ec, type: 3}
+  m_Script: {fileID: 11500000, guid: db0e9710862f0cf98b7068e4db239919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  micDetector: {fileID: 4527655754911577938}
-  loudnessThreshold: 0.1
+  micListener: {fileID: 4963598845360416249}
+  currentMicVolume: 0
